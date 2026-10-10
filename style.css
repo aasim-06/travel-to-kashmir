@@ -1,0 +1,291 @@
+/* ------------------------------
+   General styles
+------------------------------ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    color: #243b35;
+    background:
+        linear-gradient(rgba(239, 250, 246, 0.9), rgba(239, 250, 246, 0.9)),
+        url("chinar.jpg") center / cover fixed;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+/* ------------------------------
+   Header
+------------------------------ */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 18px 8%;
+    color: white;
+    background: linear-gradient(135deg, #064e3b, #087f5b);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+}
+
+header > div:first-child {
+    display: none;
+}
+
+header h1 {
+    color: #fef3c7;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    letter-spacing: 5px;
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+nav {
+    display: flex;
+    gap: 12px;
+}
+
+nav a {
+    padding: 9px 17px;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 25px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    color: #064e3b;
+    background-color: #fef3c7;
+    transform: translateY(-2px);
+}
+
+/* ------------------------------
+   Main content
+------------------------------ */
+
+main {
+    width: min(92%, 900px);
+    margin: 45px auto;
+}
+
+main section {
+    margin-bottom: 30px;
+    padding: 28px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 22px;
+    box-shadow: 0 12px 35px rgba(6, 78, 59, 0.16);
+    backdrop-filter: blur(6px);
+}
+
+main section:first-child {
+    text-align: center;
+}
+
+main section:first-child img {
+    width: 100%;
+    max-width: 700px;
+    height: 300px;
+    object-fit: cover;
+    border: 5px solid white;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    margin: 22px 0 10px;
+    color: #075985;
+    font-size: clamp(1.6rem, 4vw, 2.3rem);
+}
+
+p {
+    margin: 10px 0;
+    color: #40534d;
+    font-size: 1.05rem;
+}
+
+strong {
+    color: #b45309;
+}
+
+/* ------------------------------
+   Form
+------------------------------ */
+
+form {
+    display: grid;
+    gap: 18px;
+    margin-top: 20px;
+}
+
+form > div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+label,
+legend {
+    color: #064e3b;
+    font-weight: 700;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 13px 15px;
+    color: #243b35;
+    background-color: #f8fffc;
+    border: 2px solid #b7d8cc;
+    border-radius: 10px;
+    font: inherit;
+    outline: none;
+    transition: 0.25s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #78918a;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #0f9d70;
+    box-shadow: 0 0 0 4px rgba(15, 157, 112, 0.16);
+}
+
+fieldset {
+    display: grid;
+    gap: 10px;
+    margin-top: 5px;
+    padding: 18px;
+    border: 2px solid #b7d8cc;
+    border-radius: 12px;
+}
+
+fieldset div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #087f5b;
+}
+
+button {
+    width: fit-content;
+    margin-top: 8px;
+    padding: 13px 30px;
+    color: white;
+    background: linear-gradient(135deg, #087f5b, #064e3b);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    box-shadow: 0 6px 15px rgba(6, 78, 59, 0.25);
+    transition: 0.3s ease;
+}
+
+button:hover,
+button:focus-visible {
+    background: linear-gradient(135deg, #0f9d70, #087f5b);
+    transform: translateY(-3px);
+    box-shadow: 0 9px 20px rgba(6, 78, 59, 0.35);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* ------------------------------
+   Footer
+------------------------------ */
+
+footer {
+    padding: 35px 8%;
+    color: #eafff6;
+    background: linear-gradient(135deg, #064e3b, #022c22);
+    text-align: center;
+}
+
+footer p {
+    color: #eafff6;
+}
+
+footer strong {
+    color: #fef3c7;
+}
+
+footer > div {
+    width: min(100%, 600px);
+    margin: 20px auto 0;
+    text-align: left;
+}
+
+footer textarea {
+    min-height: 110px;
+    margin-top: 6px;
+    resize: vertical;
+}
+
+/* ------------------------------
+   Mobile design
+------------------------------ */
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        padding: 25px 5%;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    main {
+        width: 94%;
+        margin: 25px auto;
+    }
+
+    main section {
+        padding: 20px;
+    }
+
+    main section:first-child img {
+        height: 210px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+/* Respect users who prefer less animation. */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
